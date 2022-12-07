@@ -1,0 +1,81 @@
+/* Next/Previous Page */
+
+.next-page {
+  &.pb-section {
+    @include media_991 {
+      padding-bottom: 0;
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box-content {
+    width: 100%;
+    text-align: center;
+
+
+    .title {
+      width: 100%;
+      @include media_991(min){
+        padding: 50px 30px;
+        font-size: 120px;
+      }
+      @include media_991(){
+        padding: 40px 15px;
+      }
+
+      &.letter-stroke {
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    .box-animate {
+      clip-path: inset(0% 0% 0% 0%);
+      transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    &:hover {
+      .box-animate {
+        clip-path: inset(100% 0% 0% 0%);
+      }
+    }
+
+  }
+
+  .box-inner {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .box-img {
+      position: relative;
+
+      .box-img-inner {
+        margin-bottom: -100px;
+
+        @include media_991 {
+          margin-bottom: 0;
+        }
+
+        img {
+          position: absolute;
+          border: 30px solid $bg-color;
+          border-bottom: 0;
+          height: calc(100% + var(--margin-padding) * 2);
+
+          @include media_991 {
+            position: relative;
+            border: 0;
+            max-height: 50vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-restaurant {
+}

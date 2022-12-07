@@ -1,0 +1,138 @@
+/* -------------------------------------------------------
+                   Footer
+-------------------------------------------------------- */
+
+.footer {
+  .footer-inner {
+    border: 1px solid $border-color;
+  }
+
+  .box-contact {
+    .d-grid:not(.d-grid-no-space) {
+      @include media_991 {
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+      }
+    }
+  }
+
+  .footer-item {
+    &:not(:last-of-type) {
+      border-right: 1px solid $border-color;
+    }
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      @include media_768 {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+
+    &:last-of-type {
+      @include media_575 {
+        border-top: 1px solid $border-color;
+      }
+    }
+
+    .footer-item-inner {
+      padding: 15px;
+    }
+  }
+
+  .logo-footer a {
+    width: 70px;
+  }
+
+  .copyright {
+    padding-bottom: 30px;
+    margin-top: 30px;
+
+    @include media_575 {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+
+      .social {
+        margin-right: auto;
+      }
+    }
+
+    .copyright-text {
+      color: $body-color;
+      margin-top: 8px;
+    }
+  }
+
+  .scroll-top {
+    cursor: pointer;
+
+    @include media_575 {
+      display: none;
+    }
+
+    &,
+    img {
+      width: 60px;
+    }
+
+    i {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: $heading-color;
+    }
+  }
+
+  .nav-footer {
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .item {
+    p {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+body.v-dark,
+.footer.v-dark {
+  .logo-footer {
+    img {
+      &.logo-dark {
+        display: block;
+      }
+
+      &.logo-light {
+        display: none;
+      }
+    }
+  }
+}
+
+body.v-light,
+.footer.v-light {
+  .logo-footer {
+    img {
+      &.logo-dark {
+        display: none;
+      }
+
+      &.logo-light {
+        display: block;
+      }
+    }
+  }
+}

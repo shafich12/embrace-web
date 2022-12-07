@@ -1,0 +1,194 @@
+/* -------------------------------------------------------
+                  contact
+-------------------------------------------------------- */
+.contact-form {
+  .form-box {
+    position: relative;
+    z-index: 2;
+
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+
+    input,
+    textarea {
+      font-size: 16px;
+      font-weight: 500;
+      width: 100%;
+      border: 1px solid $border-color;
+      padding: 10px 18px;
+      color: $heading-color;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+.form-box {
+  position: relative;
+  padding: 40px;
+
+  &.p-0 {
+    padding: 0;
+  }
+
+  @include media_575 {
+    padding: 40px 20px;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 30px;
+
+    .help-block {
+      color: red;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.entry-box {
+  width: 100%;
+
+  input,
+  textarea {
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid $border-color;
+    padding-bottom: 10px;
+    color: $body-color;
+    margin-top: 10px;
+    margin-bottom: 0;
+    letter-spacing: -0.5px;
+
+    &::placeholder {
+      color: $body-color;
+      font-size: 16px;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  input {
+    height: 100%;
+  }
+
+  label {
+    font-family: $heading-font;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: $theme-color;
+  }
+}
+
+.box-info-contact {
+  padding-left: 30px;
+
+  @include media_991 {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  ul {
+    li {
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+
+      @include media_991 {
+        display: inline-block;
+        width: 32.8%;
+      }
+
+      @include media_768 {
+        width: 49%;
+        margin-top: 30px;
+      }
+
+      @include media_400 {
+        width: 100%;
+      }
+
+      .text-p:not(:nth-last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        display: block;
+        text-decoration: underline;
+      }
+
+      .social-item {
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.single-contact {
+  .box-info {
+    .info-item {
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+
+      .icon {
+        color: $heading-color;
+      }
+
+      a {
+        letter-spacing: 2px;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  .form-box {
+    padding: 0;
+  }
+
+  .entry-box {
+    input,
+    textarea {
+      margin-top: 0;
+      padding: 10px;
+      border: 1px solid $border-color;
+
+      &::placeholder {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+/*
+  Map
+ */
+
+.map-custom {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+
+  .gm-fullscreen-control,
+  .gm-bundled-control,
+  .gm-bundled-control-on-bottom,
+  .gmnoprint,
+  .gm-style-cc {
+    display: none !important;
+  }
+}
