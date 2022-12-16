@@ -297,7 +297,7 @@ html {
 
 body {
   background-color: var(--bg-color);
-  background-image: radial-gradient(#000 0.6px, transparent 0);
+  /* background-image: radial-gradient(#000 0.6px, transparent 0); */
   color: var(--font-color);
   line-height: var(--line-height-base);
   font-family: var(--body-font);
