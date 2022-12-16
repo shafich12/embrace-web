@@ -1737,6 +1737,18 @@
                     tl.to(mainNav.find(".container-content"), 1, {autoAlpha: 1}, "-=1");
                     tl.reverse();
 
+                    mainNav.find("ul.extend-container > li").on("click", function (e) {
+                        e.stopPropagation();
+                        mainIcon.toggleClass('nav-active');
+                        siteHeader.toggleClass('nav-active');
+
+                        if (!tl.isActive()) {
+                            menuClick.reverse(-1);
+                            tl.reversed(!tl.reversed());
+                            menuClick = gsap.timeline();
+                        }
+                    })
+
 
                     mainNav.find("ul.extend-container > li.dsn-drop-down").on("click", function (e) {
                         e.stopPropagation();
