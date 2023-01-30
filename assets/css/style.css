@@ -3087,12 +3087,12 @@ body:not(.v-dark) .site-header {
   transform: translateX(-30px);
   transition: 1s;
 }
-.brand-client .logo-box:hover img {
+/* .brand-client .logo-box:hover img {
   opacity: 0;
   visibility: hidden;
   transition-delay: 0s;
   transform: translateY(10px);
-}
+} */
 .brand-client .logo-box:hover .info {
   transform: none;
   opacity: 1;
